@@ -1,0 +1,22 @@
+{
+  "name": "ree-back-bootstrap",
+  "version": "1.0.0",
+  "description": "The local version of backend bootstrap",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reshadbinharun/ree-back-bootstrap.git"
+  },
+  "author": "Reshad Bin Harun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reshadbinharun/ree-back-bootstrap/issues"
+  },
+  "homepage": "https://github.com/reshadbinharun/ree-back-bootstrap#readme"
+}
