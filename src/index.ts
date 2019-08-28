@@ -3,8 +3,6 @@ import {createConnection, ConnectionOptions} from "typeorm";
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 
-import * as cookieParser from 'cookie-parser';
-
 const PORT = 8080;
 
 const app = express();
@@ -12,7 +10,6 @@ app.use(express.static('build'));
 app.use(bodyParser.json());
 app.set('port', process.env.PORT || PORT);
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser())
 
 /*
 Including typeorm options for Heroku deploy

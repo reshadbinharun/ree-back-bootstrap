@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "The local version of backend bootstrap",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.2",
+    "@types/pg": "^7.11.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node": "^12.9.0",
+    "pg": "^7.12.1",
+    "typeorm": "^0.2.18"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "ts-node src/index.ts",
