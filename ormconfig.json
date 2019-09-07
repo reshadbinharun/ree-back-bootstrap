@@ -2,9 +2,9 @@
    "type": "postgres",
    "host": "localhost",
    "port": 5432,
-   "username": "username",
+   "username": "reshad",
    "password": "password",
-   "database": "database",
+   "database": "genospace",
    "synchronize": false,
    "logging": false,
    "entities": [
