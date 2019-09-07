@@ -1,5 +1,5 @@
 import { IRouter } from "express-serve-static-core";
-import DomainSearch from "../DomainSearch";
+import DomainSearch from "../entities/DomainSearch";
 
 const RESULTS_PER_PAGE = 20;
 

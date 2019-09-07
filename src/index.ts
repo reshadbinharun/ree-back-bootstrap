@@ -2,7 +2,8 @@ import "reflect-metadata";
 import { createConnection, ConnectionOptions } from "typeorm";
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
-import * as cors from 'cors'; 
+import * as cors from 'cors';
+import { addSetupRoute } from "../src/routes/setup"
 
 const PORT = 8080;
 
@@ -53,12 +54,7 @@ createConnection(<ConnectionOptions>{
     /*
     add routes here
     */
-    app.get('/test', (req, res) => {
-        console.log("ping from client...");
-        res.status(200).send({
-            message: 'What\'s up?'
-        })
-   })
+    addSetupRoute(app, connection);
 
     app.listen(app.get('port'), () => {
         console.log('Express server listening on port ' + app.get('port'))
