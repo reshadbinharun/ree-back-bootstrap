@@ -9,8 +9,7 @@ export function addSetupRoute(router: IRouter, connection) {
     })
 
     router.post('/uploadDrugs', async (req, res) => {
-        let file = req.body.file;
-        console.log(file);
+        console.log(req.body)
         res.status(200).send({message: 'Got the drugs!'})
     });
 }

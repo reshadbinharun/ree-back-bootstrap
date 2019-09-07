@@ -26,7 +26,6 @@ let corsOptions = {
     // TODO: enforce before deploying
     // origin: ['http://localhost:3000','https://onefootin-beta.herokuapp.com/'],
     origin: CORS_ALLOW_REGEX,
-    credentials: true,
   }
 app.use(cors(corsOptions));
  
