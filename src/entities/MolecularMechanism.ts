@@ -4,6 +4,7 @@ import {
     Column,
     PrimaryGeneratedColumn,
     ManyToMany,
+    JoinColumn
 } from "typeorm";
 
 import Drug from "./Drug"
@@ -14,8 +15,9 @@ export default class MolecularMechanism extends BaseEntity {
     id: number;
 
     @Column()
-    mechanismName: string;
+    name: string;
 
-    @ManyToMany(type => Drug, drug => drug.molecularMechanism, { nullable: true, cascade: true})
+    @ManyToMany(type => Drug, drug => drug.molecularMechanism, { eager: true, nullable: true, cascade: true})
+    @JoinColumn({ name: "molecularMechanisms"})
     drug: Drug[];
 }

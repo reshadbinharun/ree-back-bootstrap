@@ -5,9 +5,11 @@ import {
     PrimaryGeneratedColumn,
     JoinColumn,
     ManyToMany,
+    OneToOne,
 } from "typeorm";
 
 import MolecularMechanism from "./MolecularMechanism"
+import DevelopmentStatusSummary from "./DevelopmentStatusSummary";
 
 @Entity("drug")
 export default class Drug extends BaseEntity {
@@ -15,7 +17,7 @@ export default class Drug extends BaseEntity {
     id: number;
 
     @Column()
-    mainName: string;
+    name: string;
 
     @Column({ name: "names_code", array: true, nullable: true })
     namesCode: string;
@@ -27,6 +29,9 @@ export default class Drug extends BaseEntity {
     namesGeneric: string
 
     @ManyToMany(type => MolecularMechanism, molecularMechanism => molecularMechanism.drug, { nullable: true, cascade: true})
-    @JoinColumn({ name: "molecularMechanisms"})
     molecularMechanism: MolecularMechanism[];
+
+    @OneToOne(type => DevelopmentStatusSummary, developmentStatusSummary => developmentStatusSummary.drug, { nullable: true, cascade: true})
+    @JoinColumn({ name: "developmentStatusSummary"})
+    developmentStatusSummary: DevelopmentStatusSummary[];
 }
